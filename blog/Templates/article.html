@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %} Article {% endblock %}
+
+{% block content %}
+<div align="center">
+    <a href="/add_article/" style="background-color: red">Add New Article</a>
+<hr color="purple">
+
+     {% for article in article_list %}
+        <h1>{{ article.headline }}</h1>
+        <img src="{{ article.image }}" alt="img">
+        <h6>{{ article.pub_date }}</h6>
+        <p>{{ article.content }}</p>
+        <h6>{{ article.reporter }}</h6>
+<hr>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

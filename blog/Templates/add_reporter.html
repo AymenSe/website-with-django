@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+    {% block title %} Add Reporter {% endblock %}
+
+{% block content %}
+<div align="center">
+<h1> Create a New Reporter </h1>
+    <hr>
+ <form action="/add_reporter/" method="post">
+        {% csrf_token %}
+        {% crispy form %}
+    <!--    <input type="submit" value="Enter"> -->
+    </form>
+    </div>
+    {% endblock %}

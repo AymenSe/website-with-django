@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    {% block title %}Reporter {% endblock %}
+
+
+{% block content %}
+    <div align="center">
+           <a href="/add_reporter/" style="background-color: red">Add Reporter</a>
+        <hr>
+        {% for r in reporter_list %}
+        <h4>{{ r.f_name }} {{ r.s_name }}</h4>
+        {% endfor %}
+
+    </div>
+{% endblock %}

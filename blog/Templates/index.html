@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %} Home {% endblock %}
+
+
+{% block content %}
+    <div align="center">
+        <div>
+            <h1>Welcome To My Blog |{% if user.is_authenticated %} {{ user.username }} {% else %} Visitor {% endif %}</h1>
+            <hr>
+            <p ><span class="by">by</span> <a href="https://www.facebook.com/Aymensekhri11" target="_blank">Aymen sekhri</a><span class="date">| 22 Aprile &nbsp;2016 </span></p>
+            <img class="img-fluid" src="{% static 'images/desk.jpg' %}">
+        </div>
+
+
+            <div align="center">
+                <p>Hello wrold, i'm Aymen Sekhri, 19 years old and i'm student at the national instuite of the information technologie of communication, (Oran)&nbsp;</p>
+                <p>I'm programmer and i love programming web app with Django framework</p>
+                <h2>Django</h2>
+                <figure class="figure"><img class="figure-img" src="{% static 'images/beach.jpg' %}"></figure>
+            </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}
